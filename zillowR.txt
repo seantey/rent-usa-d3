@@ -1,0 +1,100 @@
+### Note: Raw data may be different depending on period it is downloaded from the zillow website.
+
+### Reshape and Aggregate Zillow Data
+
+# Read in data
+zillowWide <- read.csv("/home/standardsean/Documents/CS360FinalProject/zillowdata.csv",stringsAsFactors = FALSE)
+
+# Drop 2010 and 2017 columns
+zillowWide <- subset(zillowWide, select = -c(X11.1.2010,X12.1.2010,X1.1.2017,X2.1.2017))
+
+# Reshape data from wide format to long format
+# Create new Time Variable Column called Data with entry values as shown in the times argument
+zillowLong <- reshape(zillowWide, direction="long", varying=list(names(zillowWide)[8:79]), v.names="Price", 
+                      timevar="Date",times=c("1.1.2011","2.1.2011","3.1.2011","4.1.2011","5.1.2011",
+                                             "6.1.2011","7.1.2011","8.1.2011","9.1.2011","10.1.2011","11.1.2011","12.1.2011",
+                                             "1.1.2012","2.1.2012","3.1.2012","4.1.2012","5.1.2012","6.1.2012",
+                                             "7.1.2012","8.1.2012","9.1.2012","10.1.2012","11.1.2012","12.1.2012",
+                                             "1.1.2013","2.1.2013","3.1.2013","4.1.2013","5.1.2013","6.1.2013",
+                                             "7.1.2013","8.1.2013","9.1.2013","10.1.2013","11.1.2013","12.1.2013",
+                                             "1.1.2014","2.1.2014","3.1.2014","4.1.2014","5.1.2014","6.1.2014",
+                                             "7.1.2014","8.1.2014","9.1.2014","10.1.2014","11.1.2014","12.1.2014",
+                                             "1.1.2015","2.1.2015","3.1.2015","4.1.2015","5.1.2015","6.1.2015",
+                                             "7.1.2015","8.1.2015","9.1.2015","10.1.2015","11.1.2015","12.1.2015",
+                                             "1.1.2016","2.1.2016","3.1.2016","4.1.2016","5.1.2016","6.1.2016",
+                                             "7.1.2016","8.1.2016","9.1.2016","10.1.2016","11.1.2016","12.1.2016"))
+
+# Convert Date entries to date objects
+zillowLong$Date <- as.Date(zillowLong$Date,format = "%m.%d.%Y")
+
+# Drop Region ID Column
+zillowLong <- subset(zillowLong, select = -c(RegionID) )
+
+# Remove null values
+zillowLong <- na.omit(zillowLong)
+
+# Create subset of 2016 data 
+# note that && does not work, & works for multiple condition which statement
+zillow2016 <- zillowLong[which( (zillowLong$Date >= as.Date("2016-1-1")) & (zillowLong$Date < as.Date("2017-1-1"))  ),]
+str(zillow2016)
+
+write.csv(zillow2016,"/home/standardsean/Documents/CS360FinalProject/zillow2016.csv",row.names = FALSE)
+### Aggregate data by taking average
+
+## Aggregate by County & State
+zillowCounty2016 <- aggregate(Price~CountyName+State,zillow2016,mean)
+# Round price to 2 decimal
+zillowCounty2016$Price <- round(zillowCounty2016$Price,2)
+# Sort by date then price
+zillowCounty2016 <- zillowCounty2016[order(-zillowCounty2016$Price),]
+# Create the csv file
+write.csv(zillowCounty2016,"/home/standardsean/Documents/CS360FinalProject/zillowCounty2016.csv",row.names = FALSE)
+
+
+## Aggregate by City & State
+zillowCity2016 <- aggregate(Price~City+State,zillow2016,mean)
+# Round price to 2 decimal
+zillowCity2016$Price <- round(zillowCity2016$Price,2)
+# Sort by date then price
+zillowCity2016 <- zillowCity2016[order(-zillowCity2016$Price),]
+# Create the csv file
+write.csv(zillowCity2016,"/home/standardsean/Documents/CS360FinalProject/zillowCity2016.csv",row.names = FALSE)
+
+## Aggregate by State
+zillowState2016 <- aggregate(Price~State,zillow2016,mean)
+# Round price to 2 decimal
+zillowState2016$Price <- round(zillowState2016$Price,2)
+# Sort by date then price
+zillowState2016 <- zillowState2016[order(-zillowState2016$Price),]
+# Create the csv file
+write.csv(zillowState2016,"/home/standardsean/Documents/CS360FinalProject/zillowState2016.csv",row.names = FALSE)
+
+
+## Filter to only continental US states
+
+zillowFilteredState2016 <- zillowState2016[-c(which(zillowState2016$State=="AL"),which(zillowState2016$State=="HI")),]
+zillowFilteredCounty2016 <- zillowCounty2016[-c(which(zillowCounty2016$State == "AL"),which(zillowCounty2016$State == "HI")),]
+zillowFilteredCity2016 <- zillowCity2016[-c(which(zillowCity2016$State=="AL"),which(zillowCity2016$State=="HI")),]
+
+write.csv(zillowFilteredState2016,"/home/standardsean/Documents/CS360FinalProject/zillowFilteredState2016.csv",row.names = FALSE)
+write.csv(zillowFilteredCounty2016,"/home/standardsean/Documents/CS360FinalProject/zillowFilteredCounty2016.csv",row.names = FALSE)
+write.csv(zillowFilteredCity2016,"/home/standardsean/Documents/CS360FinalProject/zillowFilteredCity2016.csv",row.names = FALSE)
+
+
+### Get Longitude Latitude
+unlist(zillowFilteredCity2016$City)
+unlist(zillowFilteredCity2016$State)
+
+install.packages("ggmap")
+
+library(ggmap)
+
+df <- data.frame(city = unlist(zillowFilteredCity2016$City), 
+                 unlist(zillowFilteredCity2016$State))
+
+df <- cbind(df, geocode(paste(df$city, df$state)))
+
+df
+
+write.csv(df,"/home/standardsean/Documents/CS360FinalProject/CityLatLong2016.csv",row.names = FALSE)
+

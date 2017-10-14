@@ -1,0 +1,202 @@
+CountyName,State,Price
+Collier,FL,33376.08
+Santa Barbara,CA,6507.08
+Nassau,NY,6303.3
+San Francisco,CA,5012.55
+Santa Clara,CA,4838.73
+San Mateo,CA,4555.22
+New Castle,DE,4042.25
+New York,NY,3778.6
+Westchester,NY,3532.11
+Lake,IL,3387.33
+Los Angeles,CA,3249.02
+Fairfield,CT,3068.12
+Ventura,CA,3018.83
+Alameda,CA,3008.77
+Suffolk,NY,2933.25
+Arlington,VA,2921.41
+Rockland,NY,2769.24
+Orange,CA,2755.81
+Boulder,CO,2721.29
+Somerset,NJ,2716.25
+Dist.Columbia,DC,2703.98
+Alexandria City,VA,2637.04
+Miami-Dade,FL,2611.65
+Suffolk,MA,2605.32
+San Diego,CA,2583.79
+King,WA,2561.73
+Middlesex,MA,2561.39
+Montgomery,PA,2507
+Yolo,CA,2492.71
+Williamson,TN,2476.12
+Kings,NY,2427.81
+Essex,MA,2386.33
+Hunterdon,NJ,2342.33
+Clackamas,OR,2342.18
+Putnam,NY,2324.79
+Fairfax,VA,2309.17
+Queens,NY,2264.65
+Norfolk,MA,2264.47
+Hudson,NJ,2228.98
+Monmouth,NJ,2217.65
+Richmond,NY,2161.82
+Denver,CO,2129.84
+Ocean,NJ,2119.28
+Hampshire,MA,2099.21
+Sussex,NJ,2061.92
+Sarasota,FL,2039.6
+Multnomah,OR,2031.17
+Anchorage,AK,2028.13
+Middlesex,NJ,2023.84
+Camden,NJ,2021.11
+Bucks,PA,2013
+Riverside,CA,1984.89
+Geauga,OH,1959.25
+Virginia Beach City,VA,1958.79
+Fulton,GA,1947.46
+Broward,FL,1926.87
+Burlington,NJ,1919.75
+Travis,TX,1919.08
+Orange,NY,1898.33
+Lehigh,PA,1891.25
+Placer,CA,1880.23
+Washington,OR,1857.01
+Bronx,NY,1846.64
+Deschutes,OR,1828.76
+Cumberland,ME,1821.22
+Douglas,NE,1815.33
+Barnstable,MA,1799.83
+Arapahoe,CO,1793.39
+Tompkins,NY,1788.58
+Plymouth,MA,1784.17
+Tolland,CT,1783.19
+Snohomish,WA,1762.11
+Northampton,PA,1746.83
+Cook,IL,1703.57
+Chesapeake City,VA,1702.65
+Dutchess,NY,1692.92
+Racine,WI,1680
+Middlesex,CT,1678.6
+Hillsborough,FL,1677.32
+Davidson,TN,1667
+Dallas,TX,1660.79
+Delaware,PA,1651.42
+Dane,WI,1650
+Prince William,VA,1649.25
+Litchfield,CT,1648.52
+New London,CT,1646.29
+Palm Beach,FL,1645.41
+Harris,TX,1623.09
+Hennepin,MN,1612.42
+Lake,IN,1610.12
+Orleans,LA,1606.28
+Whatcom,WA,1604.22
+Bristol,MA,1602.94
+Chester,PA,1575.54
+El Paso,CO,1552.2
+Brevard,FL,1545.42
+Hillsborough,NH,1543.75
+Mercer,NJ,1543.53
+Clark,WA,1533.99
+Kern,CA,1528.48
+Albany,NY,1522.22
+Salt Lake,UT,1521.03
+Pinellas,FL,1519.2
+Albemarle,VA,1515.6
+Tarrant,TX,1514.71
+New Haven,CT,1500.47
+Maricopa,AZ,1495.55
+Sacramento,CA,1491.78
+Essex,NJ,1490.07
+Pierce,WA,1481.81
+Providence,RI,1469.84
+Wake,NC,1462.75
+Nueces,TX,1454.49
+Ramsey,MN,1452.35
+Thurston,WA,1450.12
+Mecklenburg,NC,1441.86
+Hartford,CT,1436.42
+Davie,NC,1431.83
+Washoe,NV,1426.14
+Johnson,KS,1408.9
+Baltimore City,MD,1405.02
+Bay,FL,1397.46
+Lane,OR,1389.7
+New Hanover,NC,1381.82
+Orange,FL,1375.11
+Volusia,FL,1373.33
+San Bernardino,CA,1364.33
+Yakima,WA,1363.53
+Marion,OR,1348.99
+Philadelphia,PA,1348.27
+Erie,PA,1345.08
+Bexar,TX,1341.64
+Lincoln,OR,1335
+Richmond City,VA,1332.55
+Walworth,WI,1318.75
+Benton,AR,1313.92
+York,PA,1305.29
+East Baton Rouge,LA,1305.15
+San Joaquin,CA,1296.21
+Washington,VT,1289.33
+Hampden,MA,1288.67
+Clark,NV,1281.26
+Missoula,MT,1277.87
+Ada,ID,1275.09
+Bernalillo,NM,1267.68
+Chatham,GA,1238.08
+Kent,MI,1219.39
+Franklin,OH,1218.92
+Hampton City,VA,1208.83
+Saint Lucie,FL,1208.35
+Lewis and Clark,MT,1207.12
+Ottawa,MI,1199.25
+Butler,PA,1195.17
+Onondaga,NY,1174.81
+Allegheny,PA,1174.8
+Polk,IA,1170.78
+Carroll,NH,1170.67
+Duval,FL,1169.38
+Lancaster,NE,1165.46
+Fayette,KY,1162.85
+Fresno,CA,1143.87
+Henderson,NC,1130.42
+Spokane,WA,1122.76
+Milwaukee,WI,1096.4
+Marion,IN,1090.82
+Oklahoma,OK,1087.17
+El Paso,TX,1081.46
+Jefferson,KY,1075.04
+Tulsa,OK,1066
+Monroe,NY,1058.71
+Warren,PA,1057.5
+Pulaski,AR,1054.17
+Polk,FL,1045.56
+Forsyth,NC,1043.3
+Richland,SC,1039.73
+Kalamazoo,MI,1036.49
+Pima,AZ,1021.45
+Erie,NY,1007.51
+Craven,NC,1000.08
+Hamilton,OH,981.21
+Jackson,MO,967.16
+Saint Louis City,MO,944.89
+Jefferson,TX,942.75
+Westmoreland,PA,909.04
+Greenville,SC,902.21
+Shelby,TN,901.16
+Hinds,MS,899.47
+Knox,TN,871.52
+Pasco,FL,857.94
+Richmond,GA,850.05
+Caddo,LA,848.98
+Cuyahoga,OH,845.14
+Summit,OH,843.55
+Lucas,OH,825.03
+Sedgwick,KS,803.12
+Wayne,MI,787.77
+Saint Joseph,IN,763.47
+Montgomery,OH,746.67
+Calhoun,MI,737.33
+Allen,IN,732.28
+Mahoning,OH,570.15

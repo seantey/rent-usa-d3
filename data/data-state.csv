@@ -1,0 +1,45 @@
+State,Name,id,Price
+DE,Delaware,10,4042.25
+CA,California,6,2836.58
+DC,Dist.Columbia,11,2703.98
+NY,New York,36,2269.65
+MA,Massachusetts,25,2158.53
+WA,Washington,53,2075.15
+CO,Colorado,8,2059.07
+VA,Virginia,51,1941.84
+CT,Connecticut,9,1929.7
+OR,Oregon,41,1899.53
+NJ,New Jersey,34,1869.4
+ME,Maine,23,1821.22
+IL,Illinois,17,1713.13
+GA,Georgia,13,1644.52
+FL,Florida,12,1610.12
+MN,Minnesota,27,1582.84
+TN,Tennessee,47,1552.32
+UT,Utah,49,1521.03
+TX,Texas,48,1507.1
+RI,Rhode Island,44,1469.84
+MD,Maryland,24,1405.02
+LA,Louisiana,22,1373.36
+NC,North Carolina,37,1367.56
+NH,New Hampshire,33,1357.21
+AZ,Arizona,4,1346.55
+PA,Pennsylvania,42,1332
+NV,Nevada,32,1303.21
+VT,Vermont,50,1289.33
+WI,Wisconsin,55,1281.38
+ID,Idaho,16,1275.09
+NM,New Mexico,35,1267.68
+MT,Montana,30,1259.41
+NE,Nebraska,31,1190.46
+IA,Iowa,19,1170.78
+KY,Kentucky,21,1102.66
+OK,Oklahoma,40,1066.3
+AR,Arkansas,5,1063.13
+SC,South Carolina,45,1026.63
+OH,Ohio,39,1013.67
+MO,Missouri,29,958.59
+IN,Indiana,18,948.24
+KS,Kansas,20,930.14
+MI,Michigan,26,926.39
+MS,Mississippi,28,899.47

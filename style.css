@@ -1,0 +1,140 @@
+body {
+  background-color: white;
+  text-align: center;
+  font-family: sans-serif;
+
+}
+
+/* CSS for states shapes*/
+
+/*.states :hover {
+  fill: blue;
+}*/
+.states {
+  /*opacity: 0.5;*/
+}
+
+.border {
+  fill: none;
+  stroke-width: 1.1px;
+}
+
+.interior {
+  stroke: darkgrey;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.exterior {
+  stroke: #bbbbbb;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* CSS for county shapes */
+
+/*.valid doesn't work maybe coz there's multiple classes*/
+/*.valid :hover {
+  fill:red;
+}*/
+
+/*.counties :hover {
+  fill: red;
+}*/
+.counties { 
+  /*This works just fine, previously css not updating immediately, need browser hard reset Ctrl+Shift+R for chrome*/
+  fill: #dddddd;
+  visibility: hidden;
+  stroke: grey;
+  stroke-width: 1px;  
+}
+/*County borders don't exist in newer version*/
+/*Border created from stoke of area*/
+.county-borders {
+    /* All this is useless? Need to use d3 selections*/
+    /* This is also useless as borders are from county shape storkes.*/
+  fill: none;
+  /*stroke: #fff;*/
+  stroke: red;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.zoom-counties { 
+  /*This works just fine, previously css not updating immediately, need browser hard reset Ctrl+Shift+R for chrome*/
+  /*Actually, fill doesn't work, the rest does for some odd reason.*/
+  /*Fill has been fixed, reason was when adding color to valid county shape, forgot to specify undefined color*/
+  /*Fix was to make sure d3.selectAll was targeting valid shapes only.*/
+  fill: #dddddd;
+  visibility: hidden;
+  stroke: grey;
+  stroke-width: 1px;  
+}
+.undefinedzoom {
+  opacity: 0.5;
+}
+
+.undefined {
+  opacity: 0.5;
+}
+
+.undefinedState {
+  opacity: 0.1;  
+}
+
+
+/* Zoom related */
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.symbolbackground {
+  fill: none;
+}
+
+.states.active {
+  fill: orange;
+}
+
+
+
+#tooltip {
+  font-weight: 600;
+  text-shadow: 0px 0px 2px white;
+
+  fill: black;
+  stroke: none;
+}
+
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+
+
+/* Grid Lines*/
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+
+
