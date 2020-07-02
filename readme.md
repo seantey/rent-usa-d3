@@ -4,7 +4,7 @@ Interactive D3 map visualization of US rent data in 2016.
 ## Site Link:
 https://seantey.github.io/rent-usa-d3/
 
-![Visualization GIF](./img/rent2016_d3.gif)
+![D3 Visualization GIF](./img/rent2016_d3.gif)
 
 ## Data Source
 
